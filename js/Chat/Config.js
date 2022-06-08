@@ -1,2 +1,2 @@
-var HostChat="http://192.168.1.19:8081";
-var HostUSM="http://192.168.1.19:8080";
+var HostChat="http://81.59.182.235:8081";
+var HostUSM="http://81.59.182.235:8080";

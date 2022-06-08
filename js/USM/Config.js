@@ -1,2 +1,2 @@
 // API HOST
-var Host="http://localhost:8080"
+var Host="http://81.59.182.235:8080"
