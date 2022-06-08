@@ -7,10 +7,11 @@ FadeLogo =()=>{
     anim = setInterval(() => {
         pos-=0.05;
         logo.style.opacity=pos;
-        console.log(logo.style.opacity)
+       
         if(logo.style.opacity < 0){
+            
             logo.style.display="none";
-            clearInterval(anim)
+            clearInterval(anim);
         }
     }, 200);
    
