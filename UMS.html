@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>User USM</title>
+
+</head>
+
+<body class="bg-secondary" onload="api_GetAll()">
+    <h1 class="text-center">User Administrator</h1>
+    <div class=" container  ">
+        <!-- <button disabled="true" onclick="api_GetAll()">getAll</button > -->
+        <div class=" form-inline p-3 mb-5   ">
+            <div class="form-group p-3">
+                <input class="form-control" type="text" id="username" placeholder="Username">
+            </div>
+            <div class="form-group p-3">
+                <input class="form-control" type="text" id="email" placeholder="Email">
+            </div>
+            <div class="form-group p-3">
+                <input class="form-control" type="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-check p-3">
+                <input type="checkbox" class="form-check-input" onclick="toggle_Password_Form()">
+                <label class="form-check-label" for="exampleCheck1">Show password</label>
+            </div>
+            <button id="add" class="form-control btn btn-success" onclick="on_Add()">Add</button>
+            <button id="change"class="form-control btn btn-info" onclick="on_Change_Send()">Change</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <table class="table p-3 mb-2 bg-gradient-info text-white">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
+                    <th scope="col" class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody id="userList">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="js/USM/Config.js"></script>
+    <script src="js/USM/user.js"></script>
+    <script src="js/USM/api.js"></script>
+    <script src="js/USM/event.js"></script>
+</body>
+
+</html>
